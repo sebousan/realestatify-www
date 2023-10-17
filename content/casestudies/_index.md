@@ -1,6 +1,6 @@
 ---
 isIndex: true
-draft: false
+draft: true
 title: Les études de cas
 url: etudes-de-cas
 description: Découvrez les migrations de site Web de nos clients que nous avons réalisés.
