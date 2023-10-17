@@ -1,49 +1,32 @@
-![Twitter banner](https://user-images.githubusercontent.com/4457294/208064328-5bbf40e4-5520-41f4-8024-30c898c1a0e8.png)
+# Realestatify website
 
-# Hugolify template
+## Table des matières
 
-Is a Github template for build easily a fast, accessible friendly and low carbon website!
+- [Preprod](#preprod)
+- [Illustrations](#illustrations)
+- [Repositories](#repositories)
+- [Installation](#installation)
 
-## Table of content
-- [Live demo](#live-demo)
-- [Features](#features)
-- [Documentation](#documentation)
-- [License](#license)
+## Preprod
+https://realestatify-www.netlify.app/
 
-## Live demos
+[![Netlify Status](https://api.netlify.com/api/v1/badges/77934568-56cf-4711-a03f-5f8b59618eab/deploy-status)](https://app.netlify.com/sites/realestatify-www/deploys)
 
-### Base
-https://demo.hugolify.io/
+## Illustrations
+https://notioly.com/
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5a4fa061-e7a5-4e66-9612-4fae713bda09/deploy-status)](https://app.netlify.com/sites/hugolify-demo/deploys)
-
-### Theme 1
-https://theme-1--hugolify-demo.netlify.app/
-
-### Theme 2
-https://theme-2--hugolify-demo.netlify.app/
-
-### Theme 3
-https://theme-3--hugolify-demo.netlify.app/
-
-## Features
-Hugo sections available in theme and admin
-
-* pages
-* posts
-  * authors (taxonomy)
-  * categories (taxonomy)
-  * tags (taxonomy)
-* projects
-  * types (taxonomy)
-  * tags (taxonomy)
+## Fonctionnalités
+Types supportés par le thème et l’admin
 * casestudies
-* publications
-  * categories (taxonomy)
-  * concerned (taxonomy)
+* pages
 
-## Documentation
-[https://github.com/hugolify/hugolify-template/wiki](https://github.com/hugolify/hugolify-template/wiki)
+## Repositories
+* Template: [Hugo template](https://github.com/sebousan/hugo-template)
+* Theme: [Hugo theme](https://github.com/sebousan/hugo-theme)
+* Admin: [Hugo Netlify CMS template](https://github.com/sebousan/hugo-netlify-cms-template)
 
-## License
-Hugolify is free for personal or commercial projects (MIT license)
+## Installation
+Pour cloner avec le template avec ses submodules
+```
+git clone git@github.com:sebousan/realestatify-www.git --recurse-submodules
+```
