@@ -1,12 +1,4 @@
-# Hugolify content available https://github.com/Hugolify/hugolify-template/wiki/Content-sections
-
 imports:
-
-# Content
-- path: github.com/hugolify/hugolify-theme-casestudies
-
-# Core theme
-- path: github.com/hugolify/hugolify-theme
-
-# CMS
-- path: github.com/hugolify/hugolify-netlify-cms
+  - path: github.com/hugolify/hugolify-theme-uncinqify
+  - path: github.com/hugolify/hugolify-theme-casestudies
+  - path: github.com/hugolify/hugolify-theme
