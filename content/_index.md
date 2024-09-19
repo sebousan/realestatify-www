@@ -16,44 +16,39 @@ hero:
     text: Découvrir les fonctionnalités
     url: /les-fonctionnalites/
 blocks:
-  - type: editorial
-    direction: rtl
-    title: Les avantages
-    text: "Ils sont multiples : CMS (système de gestion de contenu) orienté métier, sécurité maximale, site Web
-      performant, rapide, éco-conçu et accessible à tous."
-    cta:
-      text: En savoir plus sur les avantages
-      url: /les-avantages/
-    image:
-      src: /images/uploads/111.Business-plan.svg
   - type: informations
     column: 4
-    background: true
-    items: 
-      - title: Performant
-        text: Un site Web ultra rapide pour un accès même avec une connexion faible.
+    background: false
+    heading:
+      surtitle: Conception
+      title: Un site Web de grande qualité !
+      text: Développé en collaboration avec des agents immobiliers.
+    items:
+      - title: Ultra rapide
+        text: Un site Web très rapide pour un accès même avec une connexion faible.
         icon: speedometer2
-      - title: Sécurisé
-        text: Pas de base de données, de plugins, de spam, de virus…
+      - title: Beaucoup plus sûr
+        text: Pas de piratage, pas de spam, pas de virus…
         icon: shield-check
       - title: Responsive
         text: Smartphone, tablet, ordinateur portable ou de bureau…
         icon: phone
+      - title: Plus visible sur Google
+        text: Réferencement naturel optimisé grâce aux bonnes pratiques.
+        icon: search-heart
       - title: Accessible à tous
         text: Rendez votre site Web accessible aux personnes handicapées.
         icon: universal-access-circle
       - title: Eco-conçu
-        text: Un site Web conçu pour générer qu’une faible émition de carbone.
+        text: Un site Web conçu pour générer qu’une faible émission de carbone.
         icon: tree
-      - title: RGPD
-        text: Une approche éthique permettant de s’affranchir des outils Google comme Maps, Fonts ou Analytics.
+      - title: Conforme RGPD
+        text: Pas de cookie et une approche éthique permettant de s’affranchir des outils Google.
         icon: heart
-      - title: Référencement
-        text: Un code respectueux des standards et de la sémantique pour un réferencement naturel optimisé.
-        icon: search-heart
       - title: Pérenne
         text: Un site Web fait pour durer, intemporel.
         icon: clock-history
+
   - type: editorial
     direction: ltr
     title: Les fonctionnalités
@@ -63,6 +58,19 @@ blocks:
       url: /les-fonctionnalites/
     image:
       src: /images/uploads/147.Multitasking.svg
+
+  - type: editorial
+    direction: rtl
+    title: Les avantages
+    text:
+      "Ils sont multiples : CMS (système de gestion de contenu) orienté métier, sécurité maximale, site Web
+      performant, rapide, éco-conçu et accessible à tous."
+    cta:
+      text: En savoir plus sur les avantages
+      url: /les-avantages/
+    image:
+      src: /images/uploads/111.Business-plan.svg
+
   - type: figure
     background: true
     grid: medium
@@ -83,15 +91,7 @@ blocks:
       blank: true
     image:
       src: /images/uploads/160.Movie-Time.svg
-  - type: editorial
-    direction: ltr
-    title: Les études de cas
-    text: Découvrez les migrations de site Web de nos clients que nous avons réalisés.
-    cta:
-      text: En savoir plus sur les études de cas
-      url: /etudes-de-cas/
-    image:
-      src: /images/uploads/152.Study-Group.svg
+
   - type: pushes
     column: 1
     items:
