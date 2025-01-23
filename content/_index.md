@@ -10,11 +10,11 @@ hero:
   image_2:
     src: /images/uploads/website.png
   cta:
-    url: /les-avantages/
-    text: Découvrir les avantages
-  cta_second:
     text: Découvrir les fonctionnalités
     url: /les-fonctionnalites/
+  cta_second:
+    url: /les-avantages/
+    text: Découvrir les avantages
 blocks:
   - type: informations
     column: 4
