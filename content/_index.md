@@ -53,11 +53,11 @@ blocks:
     background: true
     heading:
       surtitle: Pour qui ?
-      title: Pour tous les agents immobilier
+      title: Pour tous les agents immobiliers
     items:
       - title: Agent immobilier indépendant
         text: Une présentation claire de vous-même ainsi que vos biens à vendre / acheter.
-      - title: Agents immobilier associés
+      - title: Agents immobiliers associés
         text: Vos biens à vendre / acheter et la présentation de votre agence ainsi que les différents membres de l’équipe.
       - title: Agence immobilière nationale
         text: Toutes vos agences et vos équipes, vos biens à vendre / acheter, votre actualité, en français ou en plusieurs langues.
@@ -114,15 +114,14 @@ blocks:
     image:
       src: /images/uploads/160.Movie-Time.svg
 
-  - type: pushes
-    column: 1
-    items:
-      - title: Prenez contact avec nous
-        text: N’hésitez pas à nous contacter pour parler de votre projet ou planifier une démonstration de la solution.
-        offset: center
-        background_color: "#012f02"
-        color: "#fff"
-        cta:
-          text: Contactez-nous
-          url: /contact/
+  - type: cta
+    background: true
+    heading:
+      title: Prenez contact avec nous
+      text:
+        N’hésitez pas à nous contacter pour parler de votre projet ou planifier
+        une démonstration de la solution.
+    cta:
+      text: Contactez-nous
+      url: /contact/
 ---
