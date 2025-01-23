@@ -49,6 +49,28 @@ blocks:
         text: Un site Web fait pour durer, intemporel.
         icon: clock-history
 
+  - type: informations
+    background: true
+    heading:
+      surtitle: Pour qui ?
+      title: Pour tous les agents immobilier
+    items:
+      - title: Agent immobilier indépendant
+        text: Une présentation claire de vous-même ainsi que vos biens à vendre / acheter.
+      - title: Agents immobilier associés
+        text: Vos biens à vendre / acheter et la présentation de votre agence ainsi que les différents membres de l’équipe.
+      - title: Agence immobilière nationale
+        text: Toutes vos agences et vos équipes, vos biens à vendre / acheter, votre actualité, en français ou en plusieurs langues.
+
+  - type: cta
+    background: true
+    heading:
+      surtitle: Forfaits et tarifs
+      title: Et un prix adapté à la taille de votre agence !
+    cta:
+      url: /tarifs/
+      text: En savoir plus sur les forfaits et tarifs
+
   - type: editorial
     direction: ltr
     title: Les fonctionnalités
