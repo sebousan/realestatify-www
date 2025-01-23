@@ -4,7 +4,7 @@ title: Accueil
 image:
   src: /images/uploads/205.OK.svg
 hero:
-  title: Créez le site Web de votre agences immobilières sécurisé et ultra rapide.
+  title: Créez le site Web de votre agence immobilière sécurisé et ultra rapide.
   image:
     src: /images/uploads/205.OK.svg
   image_2:
