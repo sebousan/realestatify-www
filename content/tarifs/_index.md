@@ -46,9 +46,9 @@ blocks:
             icon: hand-thumbs-up
           - text: Actualité
             icon: check
-          - text: Pages
+          - text: Annonces Immobilères
             icon: check
-          - text: Projets
+          - text: Pages
             icon: check
           - text: Publications
             icon: check
@@ -84,11 +84,11 @@ blocks:
             icon: hand-thumbs-up
           - text: Actualité
             icon: check
+          - text: Annonces Immobilères
+            icon: check
           - text: Equipe
             icon: check
           - text: Pages
-            icon: check
-          - text: Projets
             icon: check
           - text: Publications
             icon: check
@@ -124,13 +124,13 @@ blocks:
             icon: hand-thumbs-up
           - text: Actualité
             icon: check
-          - text: Cabinets
+          - text: Agences
+            icon: check
+          - text: Annonces Immobilères
             icon: check
           - text: Equipe
             icon: check
           - text: Pages
-            icon: check
-          - text: Projets
             icon: check
           - text: Publications
             icon: check
