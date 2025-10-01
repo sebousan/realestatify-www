@@ -3,11 +3,11 @@ isPage: true
 draft: false
 title: Politique de confidentialité
 image:
-  src: /images/uploads/146.Erasing.svg
+  src: https://res.cloudinary.com/uncinq/image/upload/v1758116479/146.Erasing_hrxo4s.svg
 hero:
   title: Politique de confidentialité
   image:
-    src: /images/uploads/146.Erasing.svg
+    src: https://res.cloudinary.com/uncinq/image/upload/v1758116479/146.Erasing_hrxo4s.svg
 ---
 *Date de dernière mise à jour : octobre 2022*
 

@@ -1,4 +1,0 @@
----
-isIndex: true
-draft: ftrue
----

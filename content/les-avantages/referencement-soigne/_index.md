@@ -4,12 +4,12 @@ draft: false
 title: Référencement soigné
 description: La conception d’un site Web bas carbone profite au référencement. Google favorise un site Web bien conçu et rapide.
 image:
-  src: /images/uploads/190.Not-Found.svg
+  src: https://res.cloudinary.com/uncinq/image/upload/v1758116607/190.Not-Found_rgx45o.svg
 hero: 
   title: Référencement soigné
   text: La conception d’un site Web bas carbone profite au référencement. Google favorise un site Web bien conçu et rapide.
   image:
-    src: /images/uploads/190.Not-Found.svg
+    src: https://res.cloudinary.com/uncinq/image/upload/v1758116607/190.Not-Found_rgx45o.svg
 ---
 ## Amélioration de la vitesse de chargement
 Tout d'abord, l'éco-conception peut améliorer la vitesse de chargement d'un site, ce qui est un facteur de classement important pour les moteurs de recherche. En optimisant les images, en réduisant la taille des fichiers et en utilisant un système de mise en cache efficace, il est possible de réduire considérablement le temps de chargement d'une page. Les moteurs de recherche privilégient les sites web qui chargent rapidement, car ils offrent une meilleure expérience utilisateur.

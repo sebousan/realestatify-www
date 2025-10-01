@@ -4,27 +4,25 @@ draft: false
 title: Annonces immobilières
 description: Création de fiches détaillées (lieu, informations, diagnostic DPE et GES, galerie photos…).
 image:
-  src: /images/uploads/174.Project.svg
+  src: https://res.cloudinary.com/uncinq/image/upload/v1758116550/174.Project_zkpzc1.svg
 hero: 
   title: Annonces immobilières
   text: Création de fiches détaillées (lieu, informations, diagnostic DPE et GES, galerie photos…).
   image:
-    src: /images/uploads/174.Project.svg
+    src: https://res.cloudinary.com/uncinq/image/upload/v1758116550/174.Project_zkpzc1.svg
 ---
 
 ## Création d’une annonce immobilière
 
-{{< figure src="/images/uploads/admin-annonce.png" >}}
+{{< figure src="https://res.cloudinary.com/uncinq/image/upload/v1759310743/admin-annonce_wwwnzo.png" >}}
 
 ### Informations
 Surface intérieur / extérieure, nombre de niveau, nombre de pièces, de chambres, de sale de bains / d’eau.
 
-{{< figure src="/images/uploads/admin-informations.png" >}}
+{{< figure src="https://res.cloudinary.com/uncinq/image/upload/v1759310754/admin-informations_c77xuq.png" >}}
 
 ### Diagnostic
-Diagnostic de performance énergétique et gaz à effet de serre
-
-{{< figure src="/images/uploads/admin-diagnostic.png" >}}
+Diagnostic de performance énergétique et gaz à effet de serre.
 
 ### Emplacement
 
@@ -35,13 +33,13 @@ L’emplacement du bien (seule la zone sera affichée) :
 * Pays
 * Coordonnées
 
-{{< figure src="/images/uploads/admin-address.png" >}}
+{{< figure src="https://res.cloudinary.com/uncinq/image/upload/v1759310737/admin-address_ys1vfr.png" >}}
 
 ### Galerie photo
 
-{{< figure src="/images/uploads/admin-gallery.png" >}}
+{{< figure src="https://res.cloudinary.com/uncinq/image/upload/v1759310749/admin-gallery_rexbtk.png" >}}
 
 ## Type de bien
 Maison, appartement, boutique…
 
-{{< figure src="/images/uploads/admin-types.png" >}}
+{{< figure src="https://res.cloudinary.com/uncinq/image/upload/v1759310785/admin-types_sgy1xo.png" >}}

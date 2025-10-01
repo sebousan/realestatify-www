@@ -2,13 +2,13 @@
 isIndex: true
 title: Accueil
 image:
-  src: /images/uploads/205.OK.svg
+  src: https://res.cloudinary.com/uncinq/image/upload/v1758116615/205.OK_zdg2ue.svg
 hero:
   title: Créez le site Web de votre agence immobilière sécurisé et ultra rapide.
   image:
-    src: /images/uploads/205.OK.svg
+    src: https://res.cloudinary.com/uncinq/image/upload/v1758116863/323.Real-Estate-Agent_k1joqv.svg
   image_2:
-    src: /images/uploads/website.png
+    src: https://res.cloudinary.com/uncinq/image/upload/v1759305747/website_fyqtjp.png
   ctas:
     - text: Découvrir les fonctionnalités
       url: /les-fonctionnalites/
@@ -54,11 +54,20 @@ blocks:
       surtitle: Pour qui ?
       title: Pour tous les agents immobiliers
     items:
-      - title: Agent immobilier indépendant
+      - image:
+          src: https://res.cloudinary.com/uncinq/image/upload/v1758116863/323.Real-Estate-Agent_k1joqv.svg
+          isLogo: true
+        title: Agent immobilier indépendant
         text: Une présentation claire de vous-même ainsi que vos biens à vendre / acheter.
-      - title: Agents immobiliers associés
+      - image:
+          src: https://res.cloudinary.com/uncinq/image/upload/v1758116609/194.High-Five_oww259.svg
+          isLogo: true
+        title: Agents immobiliers associés
         text: Vos biens à vendre / acheter et la présentation de votre agence ainsi que les différents membres de l’équipe.
-      - title: Agence immobilière nationale
+      - image:
+          src: https://res.cloudinary.com/uncinq/image/upload/v1758116887/386.Remote-Meeting_kjfdvr.svg
+          isLogo: true
+        title: Agence immobilière nationale
         text: Toutes vos agences et vos équipes, vos biens à vendre / acheter, votre actualité, en français ou en plusieurs langues.
 
   - type: cta
@@ -78,7 +87,7 @@ blocks:
       text: En savoir plus sur les fonctionnalités
       url: /les-fonctionnalites/
     image:
-      src: /images/uploads/147.Multitasking.svg
+      src: https://res.cloudinary.com/uncinq/image/upload/v1758116479/147.Multitasking_wqtjvy.svg
 
   - type: editorial
     direction: rtl
@@ -90,7 +99,7 @@ blocks:
       text: En savoir plus sur les avantages
       url: /les-avantages/
     image:
-      src: /images/uploads/111.Business-plan.svg
+      src: https://res.cloudinary.com/uncinq/image/upload/v1758116455/111.Business-plan_vozhtx.svg
 
   - type: figure
     background: true
@@ -100,8 +109,10 @@ blocks:
       title: Un espace de gestion de contenu orienté métier
       text: Configuration sur mesure.
     figure:
-      src: /images/uploads/admin-home.png
+      screenshot: true
+      src: https://res.cloudinary.com/uncinq/image/upload/v1759159412/screenshot-realestatify-decapcms-home_bqsx7k.png
       legend: Page d’accueil de l’espace de gestion de contenu, permettant la mise à jour de votre site Web.
+  
   - type: editorial
     direction: rtl
     title: Le site exemple
@@ -111,7 +122,7 @@ blocks:
       url: https://demo.realestatify.io
       blank: true
     image:
-      src: /images/uploads/160.Movie-Time.svg
+      src: https://res.cloudinary.com/uncinq/image/upload/v1758116487/160.Movie-Time_mzfiqq.svg
 
   - type: cta
     background: true

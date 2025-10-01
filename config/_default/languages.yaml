@@ -1,9 +1,5 @@
 fr:
+  languageCode: fr
   languageName: Français
   title: Realestatify
-  weight: 2
-
-# en:
-#   languageName: English
-#   title: Realestatify
-#   weight: 2
+  weight: 1
