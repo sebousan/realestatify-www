@@ -2,12 +2,12 @@
 isPage: true
 draft: false
 title: Tarifs et forfaits
-description: En fonction des besoins et de la taille de l’agence.
+description: Des formules adaptées à la taille et aux besoins de votre agence, avec une tarification claire et transparente.
 image:
   src: https://res.cloudinary.com/uncinq/image/upload/v1758116894/398.Make-It-Rain_cad0hn.svg
 hero:
   title: Tarifs et forfaits
-  text: En fonction des besoins et de la taille de l’agence.
+  text: Des formules adaptées à la taille et aux besoins de votre agence, avec une tarification claire et transparente.
   image:
     src: https://res.cloudinary.com/uncinq/image/upload/v1758116894/398.Make-It-Rain_cad0hn.svg
 blocks:
