@@ -10,7 +10,7 @@ const BOOTSTRAP_ICONS_FONT_DIR = "node_modules/bootstrap-icons/font/fonts";
 const FONT_OUTPUT_DIR = "static/assets/fonts/bootstrap-icons";
 const SCSS_OUTPUT_PATH = "assets/scss/bootstrap-icons/bootstrap-icons.scss";
 const HUGOLIFY_MODULES_BASE = "_vendor/github.com/hugolify";
-const THEME_MODULES_BASE = "_vendor/github.com/sebousan/hugolify-theme-uncinqify";
+const THEME_MODULES_BASE = "_vendor/github.com/sebousan";
 
 // Utility function for logging with emojis
 function log(emoji, message) {
@@ -57,9 +57,34 @@ function getHugolifyModules() {
         modules.push(modulePath);
       }
     });
+    
+    if (modules.length > 0) {
+      log("📦", `Found ${modules.length} Hugo modules: ${items.join(", ")}`);
+    }
+    
+    return modules;
+  } catch (err) {
+    console.warn(`⚠️ Could not read Hugo modules: ${err.message}`);
+    return [];
+  }
+}
 
-    // Add uncinq theme
-    modules.push(THEME_MODULES_BASE);
+// Get all theme modules
+function getThemeModules() {
+  if (!fs.existsSync(THEME_MODULES_BASE)) {
+    return [];
+  }
+
+  try {
+    const modules = [];
+    const items = fs.readdirSync(THEME_MODULES_BASE);
+    
+    items.forEach((item) => {
+      const modulePath = path.join(THEME_MODULES_BASE, item);
+      if (fs.statSync(modulePath).isDirectory()) {
+        modules.push(modulePath);
+      }
+    });
     
     if (modules.length > 0) {
       log("📦", `Found ${modules.length} Hugo modules: ${items.join(", ")}`);
@@ -80,29 +105,27 @@ function checkBootstrapIcons() {
   }
 }
 
-// Check if subset-font is installed
-function ensureSubsetFont() {
+// Check if package is installed
+function ensurePackageInstalled(pkg) {
   const packageJsonPath = "package.json";
-  
-  // Check if subset-font is in package.json
-  if (fs.existsSync(packageJsonPath)) {
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
-    const hasSubsetFont = 
-      (packageJson.dependencies && packageJson.dependencies["subset-font"]) ||
-      (packageJson.devDependencies && packageJson.devDependencies["subset-font"]);
-    
-    if (!hasSubsetFont) {
-      log("📦", "Installing subset-font...");
-      try {
-        execSync("yarn add -D subset-font", { stdio: "inherit" });
-        log("✅", "subset-font installed");
-      } catch (installErr) {
-        console.error("❌ Failed to install subset-font:", installErr.message);
-        process.exit(1);
-      }
+  if (!fs.existsSync(packageJsonPath)) return;
+
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+  const hasPkg = (packageJson.dependencies && packageJson.dependencies[pkg]) ||
+                 (packageJson.devDependencies && packageJson.devDependencies[pkg]);
+
+  if (!hasPkg) {
+    log("📦", `Installing ${pkg}...`);
+    try {
+      execSync(`yarn add -D ${pkg}`, { stdio: "inherit" });
+      log("✅", `${pkg} installed`);
+    } catch (err) {
+      console.error(`❌ Failed to install ${pkg}:`, err.message);
+      process.exit(1);
     }
   }
 }
+
 
 // Extract Bootstrap Icons unicode mapping from the official font CSS
 function getBootstrapIconsUnicodeMap() {
@@ -137,6 +160,16 @@ function getBootstrapIconsUnicodeMap() {
 // 1. Extract icons from content files (MD/HTML)
 function extractIconsFromContent() {
   const contentDirs = ["content"];
+
+  const modules = getThemeModules();
+  modules.forEach((modulePath) => {
+    const moduleContentPath = path.join(modulePath, "content");
+    if (fs.existsSync(moduleContentPath)) {
+      contentDirs.push(moduleContentPath);
+    }
+  });
+  log("📦", contentDirs);
+
   const icons = new Set();
 
   contentDirs.forEach((dir) => {
@@ -167,7 +200,15 @@ function extractIconsFromSass() {
   const sassDirs = ["assets/sass", "assets/scss"];
   
   // Add Hugolify modules SASS if they exist
-  const modules = getHugolifyModules();
+  let modules = getHugolifyModules();
+  modules.forEach((modulePath) => {
+    const moduleSassPath = path.join(modulePath, "assets/sass");
+    if (fs.existsSync(moduleSassPath)) {
+      sassDirs.push(moduleSassPath);
+    }
+  });
+
+  modules = getThemeModules();
   modules.forEach((modulePath) => {
     const moduleSassPath = path.join(modulePath, "assets/sass");
     if (fs.existsSync(moduleSassPath)) {
@@ -245,7 +286,60 @@ function extractIconsFromLayouts() {
   return icons;
 }
 
-// 4. Create font subset using subset-font library
+// 4. Extract icons form social menu
+async function extractIconsFromSocialData() {
+  const { default: yaml } = await import("js-yaml");
+  const socialFilePath = "data/menu/social.yml";
+  const icons = new Set();
+
+  if (!fs.existsSync(socialFilePath)) {
+    log("⚠️", "Aucun fichier social.yml trouvé");
+    return icons;
+  }
+
+  try {
+    const content = fs.readFileSync(socialFilePath, "utf-8");
+    const data = yaml.load(content);
+
+    if (!data || typeof data !== "object") {
+      log("⚠️", "Fichier social.yml mal formé");
+      return icons;
+    }
+
+    // Parcours de toutes les clés racine
+    Object.keys(data).forEach((key) => {
+      const node = data[key];
+
+      // Cas simple : key = "links"
+      if (key === "links" && Array.isArray(node)) {
+        node.forEach((link) => {
+          if (link.title && typeof link.title === "string") {
+            const iconName = link.title.toLowerCase().trim();
+            if (/^[\w-]+$/.test(iconName)) icons.add(iconName);
+          }
+        });
+      }
+
+      // Cas multilingue : key = "fr", "en", etc.
+      else if (node && typeof node === "object" && Array.isArray(node.links)) {
+        node.links.forEach((link) => {
+          if (link.title && typeof link.title === "string") {
+            const iconName = link.title.toLowerCase().trim();
+            if (/^[\w-]+$/.test(iconName)) icons.add(iconName);
+          }
+        });
+      }
+    });
+
+    log("📱", `Trouvé ${icons.size} icônes dans social.yml`);
+  } catch (err) {
+    console.warn(`⚠️ Erreur de lecture du fichier social.yml : ${err.message}`);
+  }
+
+  return icons;
+}
+
+// Create font subset using subset-font library
 async function createFontSubset(iconNames, unicodeMap) {
   // Dynamic import of subset-font
   const { default: subsetFont } = await import("subset-font");
@@ -376,26 +470,37 @@ async function main() {
 
     // Check dependencies
     checkBootstrapIcons();
-    ensureSubsetFont();
+    ensurePackageInstalled("subset-font");
+    ensurePackageInstalled("js-yaml");
+
 
     // Load unicode mapping from Bootstrap Icons
     const unicodeMap = getBootstrapIconsUnicodeMap();
 
     // Extract icons from all sources
-    log("🔍", "Extracting icons from content...");
+    log("🔍", "Extracting icons from content…");
     const iconsFromContent = extractIconsFromContent();
     log("📄", `Found ${iconsFromContent.size} icons in content`);
 
-    log("🔍", "Extracting icons from SASS...");
+    log("🔍", "Extracting icons from SASS…");
     const iconsFromSass = extractIconsFromSass();
     log("🎨", `Found ${iconsFromSass.size} icons in SASS`);
 
-    log("🔍", "Extracting icons from layouts...");
+    log("🔍", "Extracting icons from layouts…");
     const iconsFromLayouts = extractIconsFromLayouts();
     log("📐", `Found ${iconsFromLayouts.size} icons in layouts`);
 
+    log("🔍", "Extracting icons from social menu…");
+    const iconsFromSocial = await extractIconsFromSocialData();
+    log("📋", `Found ${iconsFromSocial.size} icons in social menu`);
+
     // Combine all icons
-    const allIcons = new Set([...iconsFromContent, ...iconsFromSass, ...iconsFromLayouts]);
+    const allIcons = new Set([
+      ...iconsFromContent, 
+      ...iconsFromSass, 
+      ...iconsFromLayouts, 
+      ...iconsFromSocial
+    ]);
 
     if (allIcons.size === 0) {
       log("⚠️", "No icons found. Exiting...");

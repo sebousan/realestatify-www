@@ -1,19 +1,43 @@
 ---
 isPage: true
 draft: false
-title: Forfaits et tarifs
+title: Tarifs et forfaits
 description: En fonction des besoins et de la taille de l’agence.
 image:
   src: https://res.cloudinary.com/uncinq/image/upload/v1758116894/398.Make-It-Rain_cad0hn.svg
 hero:
-  title: Forfaits et tarifs
+  title: Tarifs et forfaits
   text: En fonction des besoins et de la taille de l’agence.
   image:
     src: https://res.cloudinary.com/uncinq/image/upload/v1758116894/398.Make-It-Rain_cad0hn.svg
 blocks:
+
+  - type: editorial
+    background: false
+    direction: rtl
+    surtitle: Tarifs
+    title: Installation à partir de 1 800 € HT
+    text: >-
+      En complément de l’abonnement mensuel, des frais d’installation sont nécessaire pour mettre votre site en place dans les meilleures conditions.
+
+      
+      Ce service comprend :
+
+      * L’installation complète du site ;
+      
+      * La mise en place du thème Realestatify;
+
+      * Ajout du logo, couleurs et typographies de l’agence;
+      
+      * La personnalisation du CMS selon vos besoins ;
+      
+      * La configuration du nom de domaine.
+    image:
+      src: https://res.cloudinary.com/uncinq/image/upload/v1758117377/541.Meditation-Moment_eu5c1h.svg
+
   - type: comparison
     heading:
-      surtitle: Forfaits et tarifs
+      surtitle: Forfaits 
       title: Un site Web de grande qualité à un prix adapté à la taille de votre agence
     column: 3
     items:
@@ -144,6 +168,9 @@ blocks:
       text: Toutes les options sont facturées **10€/mois** HT.
     column: 3
     items:
+      - icon: cloud-arrow-up
+        title: Images
+        text: Hébergement des images sur un CDN garantissant un chargement ultra-rapide et un espace de stockage considérablement étendu.
       - icon: globe
         title: Multilingue
         text: Site Web en plusieurs langues.

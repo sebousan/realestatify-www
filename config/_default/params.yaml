@@ -9,3 +9,14 @@ carousel: false
 bootstrap:
   modal: false
 map: false
+
+# Brand
+brand:
+  name: Realestatify
+  cms:
+    decap: https://res.cloudinary.com/uncinq/image/upload/v1759159412/screenshot-realestatify-decapcms-home_bqsx7k.png
+  email: realestatify@uncinq.dev 
+  url: realestatify.io
+  your:
+    of: des agences immobilières
+    to: aux agences immobilières
