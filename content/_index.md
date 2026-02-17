@@ -133,6 +133,6 @@ blocks:
         N’hésitez pas à nous contacter pour parler de votre projet ou planifier
         une démonstration de la solution.
     cta:
-      text: Contactez-nous
+      text: Nous contacter
       url: /contact/
 ---

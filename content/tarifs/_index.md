@@ -78,7 +78,7 @@ blocks:
             icon: check
         cta:
           url: /contact/
-          text: Contactez-nous
+          text: Nous contacter
       - title: Pack Associés
         text: Pour une agence de plusieurs collaborateurs.
         offer:
@@ -118,7 +118,7 @@ blocks:
             icon: check
         cta:
           url: /contact/
-          text: Contactez-nous
+          text: Nous contacter
       - title: Pack International
         text: Pour plusieurs agences de plusieurs collaborateurs.
         offer:
@@ -160,7 +160,7 @@ blocks:
             icon: check
         cta:
           url: /contact/
-          text: Contactez-nous
+          text: Nous contacter
   - type: informations
     heading:
       surtitle: Options
@@ -183,5 +183,5 @@ blocks:
       src: https://res.cloudinary.com/uncinq/image/upload/v1758116531/166.Painting_bvgs0f.svg
     cta:
       url: /contact/
-      text: Contactez-nous
+      text: Nous contacter
 ---
